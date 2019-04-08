@@ -30,8 +30,21 @@ public class TodoService {
 		return userTodos;
 	}
 	
+	public Todo getTodoById(int id) {
+		for (Todo todo:todos) {
+			if (todo.getId()==id)
+				return todo;
+		}
+		return null;
+	}
+	
 	public void addTodo(String user, String desc, Date targetDate) {
 		todos.add(new Todo(++count, user, desc, targetDate, false));
+	}
+	
+	public void updateTodo(Todo todo) {
+		todos.remove(todo);
+		todos.add(todo);
 	}
 	
 	public void deleteTodo(int id) {
