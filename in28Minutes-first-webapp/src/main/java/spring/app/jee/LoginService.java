@@ -1,4 +1,4 @@
-package webapp;
+package spring.app.jee;
 
 public class LoginService {
 	public boolean validateUser(String user, String password) {

@@ -1,4 +1,4 @@
-package webapp;
+package spring.app.jee;
 
 import java.io.IOException;
 
