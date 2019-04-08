@@ -24,7 +24,7 @@ public class LoginController {
 	public String handleLoginRequest(@RequestParam String name, @RequestParam String password, ModelMap model) {
 		if (service.validateUser(name, password)) {
 			model.put("name", name);
-			return "list-todos";
+			return "welcome";
 		}
 		model.put("errorMessage","Invalid credentials");
 		return "login";
